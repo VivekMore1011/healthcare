@@ -100,7 +100,9 @@ export const AppointmentForm = ({
             status: status as Status,
             cancellationReason: values.cancellationReason,
           },
-          type,
+          type: 'schedule',
+          timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone, // e.g., "Asia/Kolkata"
+        
         };
 
         const updatedAppointment = await updateAppointment(appointmentToUpdate);
