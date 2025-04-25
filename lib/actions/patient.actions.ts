@@ -16,6 +16,10 @@ import { parseStringify } from "../utils";
 
 // CREATE APPWRITE USER
 export const createUser = async (user: CreateUserParams) => {
+  console.error("An before login",user.email );
+  console.error("An before login", user.phone);
+  console.error("An before login",user.name );
+  console.error("An before login", );
   try {
     // Create new user -> https://appwrite.io/docs/references/1.5.x/server-nodejs/users#create
     const newuser = await users.create(
